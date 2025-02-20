@@ -25,3 +25,8 @@
 2) Input handling
 3) Display information
 4) Termination
+
+# Progress
+1) Create DBService Singleton class to manage database connection
+    - Convert DBService class into a Singleton (/)
+    - implement connection between c# program to database using ADO.NET library ()

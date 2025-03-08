@@ -6,11 +6,3 @@
 //
 using TodoList;
 using System;
-
-DBService db = DBService.GetInstance();
-DBService db2 = DBService.GetInstance();
-Console.WriteLine(db.randomNumber);
-Console.WriteLine(db2.randomNumber);
-if (db == db2) {
-    Console.WriteLine("both are same instance");
-}

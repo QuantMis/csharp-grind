@@ -1,12 +1,14 @@
 ﻿
 
-// responsibility: manage connection with the database
+// responsibility: 
+// - manage connection with the database
+// - abstract the ADO.NET library
 //
 // states: 
 // - connection instance (public)
 // - connection string (private)
 //
-// behavior:
+// behavior: connection lifecycle
 // - createConnection()
 // - closeConnection()
 // - executeQuery()
@@ -20,11 +22,11 @@
 // - execute query on behalf of other object
 
 using System;
+using System.Data.SqlClient
+
 namespace TodoList;
 public class DBService
 {
-    public int randomNumber;
-
     private static DBService _instance;
 
     public static DBService GetInstance() {
@@ -35,11 +37,6 @@ public class DBService
     }
 
     private DBService() {
-        this.generateRandom();
-    }
-
-    private void generateRandom() {
-        this.randomNumber = (new Random()).Next(999,9999);
     }
 
 }
